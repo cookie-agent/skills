@@ -19,3 +19,11 @@ user skill with the same name always wins.
 Every push is checked by CI against the latest Cookie Agent release: each
 skill must parse, name only `cookie` subcommands that exist, and link only to
 documentation pages that exist.
+
+## Changing a skill
+
+Edit `<name>/SKILL.md`, bump the skill's `version` in `index.json` (and its
+`requires_cookie` when it starts relying on a newer Cookie Agent), then run
+`scripts/update-index.py` to refresh the hashes and `cookie skills check .`
+to validate it (`--docs <cookie-agent>/docs/site` checks links against a
+docs checkout instead of the published site).

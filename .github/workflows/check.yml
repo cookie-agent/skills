@@ -1,0 +1,31 @@
+name: Check
+
+# Every skill must parse, name only `cookie` commands that exist, and link
+# only to documentation pages that exist, checked by the latest Cookie Agent
+# release. Nightly runs catch a release or a docs change that breaks a skill
+# nobody touched.
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "17 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Install the latest Cookie Agent release
+        run: |
+          curl --proto '=https' --tlsv1.2 -LsSf https://github.com/cookie-agent/cookie-agent/releases/latest/download/cookie_agent-installer.sh | sh
+          echo "$HOME/.cargo/bin" >> "$GITHUB_PATH"
+      - name: Show the version
+        run: cookie --version
+      - name: Check the skills
+        run: cookie skills check .

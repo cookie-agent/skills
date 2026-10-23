@@ -1,4 +1,27 @@
 {
   "version": 1,
-  "skills": []
+  "skills": [
+    {
+      "name": "add-cookie-runtime",
+      "version": "1.0.0",
+      "requires_cookie": ">=0.3.0",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "sha256": "8b650fd15f5d18e20bc891941faffa38c72a10cf9c338586e1505ed153466cd3"
+        }
+      ]
+    },
+    {
+      "name": "customize-cookie-agent",
+      "version": "1.0.0",
+      "requires_cookie": ">=0.3.0",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "sha256": "4b41a222d7851e82c604054e1d0527c66a00f94818a4f0a185007dfb22f03982"
+        }
+      ]
+    }
+  ]
 }
