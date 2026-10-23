@@ -13,7 +13,7 @@ satisfies.
 - `<name>/SKILL.md` is the skill itself.
 
 A daemon fetches the index at start and then daily, downloads changed files,
-checks their hashes, and keeps them in `~/.cookie-agent/managed/skills/`. A
+checks their hashes, and keeps them in `official_skills/` in the daemon's data root (`~/.cookie-agent/official_skills/` by default). A
 user skill with the same name always wins.
 
 Every push is checked by CI against the latest Cookie Agent release: each
