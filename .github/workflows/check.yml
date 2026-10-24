@@ -21,9 +21,15 @@ jobs:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
           persist-credentials: false
-      - name: Install the latest Cookie Agent release
+      # The newest release, prereleases included: nightly builds carry the
+      # `cookie skills` commands before a stable release does.
+      - name: Install the newest Cookie Agent release
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          curl --proto '=https' --tlsv1.2 -LsSf https://github.com/cookie-agent/cookie-agent/releases/latest/download/cookie_agent-installer.sh | sh
+          tag="$(gh release list -R cookie-agent/cookie-agent --limit 1 --json tagName --jq '.[0].tagName')"
+          echo "installing $tag"
+          curl --proto '=https' --tlsv1.2 -LsSf "https://github.com/cookie-agent/cookie-agent/releases/download/$tag/cookie_agent-installer.sh" | sh
           echo "$HOME/.cargo/bin" >> "$GITHUB_PATH"
       - name: Show the version
         run: cookie --version

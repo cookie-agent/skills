@@ -4,7 +4,7 @@
     {
       "name": "add-cookie-runtime",
       "version": "1.0.0",
-      "requires_cookie": ">=0.3.0",
+      "requires_cookie": ">=0.3.0-alpha.0",
       "files": [
         {
           "path": "SKILL.md",
@@ -15,7 +15,7 @@
     {
       "name": "customize-cookie-agent",
       "version": "1.0.0",
-      "requires_cookie": ">=0.3.0",
+      "requires_cookie": ">=0.3.0-alpha.0",
       "files": [
         {
           "path": "SKILL.md",
