@@ -51,15 +51,15 @@ this session runs on that daemon too.
 
 ## Docs
 
-- Configuration: https://cookie-agent.github.io/doc/latest/engine/configuration/
-- Getting started and onboarding: https://cookie-agent.github.io/doc/latest/quickstart/
-- Providers: https://cookie-agent.github.io/doc/latest/extend/providers/
-- Agents and permissions: https://cookie-agent.github.io/doc/latest/extend/agents/
-- Skills: https://cookie-agent.github.io/doc/latest/extend/skills/
-- MCP servers: https://cookie-agent.github.io/doc/latest/extend/mcp/
-- Runtimes: https://cookie-agent.github.io/doc/latest/runtimes/
-- ACP agents: https://cookie-agent.github.io/doc/latest/engine/acp/
-- Cron jobs: https://cookie-agent.github.io/doc/latest/sessions/scheduling/
-- Memory: https://cookie-agent.github.io/doc/latest/sessions/memory/
-- The persistent daemon: https://cookie-agent.github.io/doc/latest/daemon/persistent/
-- The command line: https://cookie-agent.github.io/doc/latest/clients/cli/
+- Configuration: https://cookie-agent.github.io/doc/dev/engine/configuration/
+- Getting started and onboarding: https://cookie-agent.github.io/doc/dev/quickstart/
+- Providers: https://cookie-agent.github.io/doc/dev/extend/providers/
+- Agents and permissions: https://cookie-agent.github.io/doc/dev/extend/agents/
+- Skills: https://cookie-agent.github.io/doc/dev/extend/skills/
+- MCP servers: https://cookie-agent.github.io/doc/dev/extend/mcp/
+- Runtimes: https://cookie-agent.github.io/doc/dev/runtimes/
+- ACP agents: https://cookie-agent.github.io/doc/dev/engine/acp/
+- Cron jobs: https://cookie-agent.github.io/doc/dev/sessions/scheduling/
+- Memory: https://cookie-agent.github.io/doc/dev/sessions/memory/
+- The persistent daemon: https://cookie-agent.github.io/doc/dev/daemon/persistent/
+- The command line: https://cookie-agent.github.io/doc/dev/clients/cli/
